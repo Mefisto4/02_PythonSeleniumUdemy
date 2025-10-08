@@ -2,8 +2,6 @@
 Represents simple, clickable controls.
 """
 
-
-
 from utilities.base_controls.base_control import _BaseControl
 
 
