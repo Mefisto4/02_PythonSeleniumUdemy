@@ -1,0 +1,7 @@
+repos:
+  - repo: https://github.com/Mefisto4/02_PythonSeleniumUdemy
+    rev: v0.13.3  # Ruff version.
+    hooks:
+      - id: ruff-check  # Run the linter.
+        args: [ --fix ]
+      - id: ruff-format  # Run the formatter.
