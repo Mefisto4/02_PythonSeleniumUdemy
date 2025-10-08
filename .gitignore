@@ -2,4 +2,6 @@
 /.venv/
 /allure-results/
 /99_notes/
+__pycache__/
 **/__pycache__/
+*.py[cod]
