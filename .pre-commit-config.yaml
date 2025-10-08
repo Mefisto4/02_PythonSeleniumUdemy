@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/Mefisto4/02_PythonSeleniumUdemy
+  - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.13.3  # Ruff version.
     hooks:
       - id: ruff-check  # Run the linter.
