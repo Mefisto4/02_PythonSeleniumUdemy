@@ -5,6 +5,7 @@ exclude = [
     ".idea",
     ".pytest_cache",
     ".ruff_cache",
+    ".mypy_cache",
     ".venv",
     "__pycache__",
 ]
