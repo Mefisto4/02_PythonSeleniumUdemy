@@ -1,7 +1,10 @@
-/.idea/
-/.venv/
-/allure-results/
-/99_notes/
+.idea/
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+allure-results/
+99_notes/
 __pycache__/
 **/__pycache__/
 *.py[cod]
