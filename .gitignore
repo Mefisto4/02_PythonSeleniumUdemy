@@ -1,1 +1,3 @@
-# blank for now
+/.venv/
+/allure-results/
+/99_notes/
