@@ -2,7 +2,7 @@
 Represents simple elements that allow to input and display text.
 """
 
-from utilities.base_controls.base_control import _BaseControl
+from utilities.control_objects.base_control import _BaseControl
 
 
 class Textbox(_BaseControl):
@@ -14,11 +14,11 @@ class Textbox(_BaseControl):
         """
         Gets text from textbox.
 
-        :return: str
+        :return: displayed text
         """
         value = self.web_element.get_attribute("value")
         if isinstance(value, str):
-            return self.web_element.get_attribute("value")
+            return value
         raise AttributeError(f"Could not retrieve 'value' attribute for {self}")
 
     @_BaseControl.pre_action

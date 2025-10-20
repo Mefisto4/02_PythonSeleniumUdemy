@@ -2,7 +2,7 @@
 Represents read-only controls.
 """
 
-from utilities.base_controls.base_control import _BaseControl
+from utilities.control_objects.base_control import _BaseControl
 
 
 class Label(_BaseControl):

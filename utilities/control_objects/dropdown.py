@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
-from utilities.base_controls.base_control import _BaseControl
+from utilities.control_objects.base_control import _BaseControl
 
 
 class _Dropdown(_BaseControl):
@@ -28,11 +28,19 @@ class DropdownStatic(_Dropdown):
         """
         Selects dropdown value based on visible text.
 
-        :param value:
+        :param value: string value to select.
         :return: None
         """
         dropdown = Select(self.web_element)
         dropdown.select_by_visible_text(value)
+
+    def get_text(self) -> str:
+        """
+        Gets selected text or placeholder text.
+
+        :return: text value from dropdown input field
+        """
+        return Select(self.web_element).first_selected_option.text
 
 
 class DropdownDynamic(_Dropdown):
@@ -50,9 +58,12 @@ class DropdownDynamic(_Dropdown):
         """
 
         :param driver: WebDriver for current browser, i.e.: webdriver.Chrome()
-        :param dropdown_locator: pair of By strategy and locator, i.e.: (By.CSS_SELECTOR, "input[value='admin']")
-        :param dropdown_list_locator: pair of By strategy and locator, i.e.: (By.CSS_SELECTOR, "input[value='admin']")
-        :param dropdown_list_item_locator: pair of By strategy and locator, i.e.: (By.CSS_SELECTOR, "input[value='admin']")
+        :param dropdown_locator: pair of By strategy and locator, i.e.:
+                                    (By.CSS_SELECTOR, "input[value='admin']")
+        :param dropdown_list_locator: pair of By strategy and locator, i.e.:
+                                        (By.CSS_SELECTOR, "input[value='admin']")
+        :param dropdown_list_item_locator: pair of By strategy and locator, i.e.:
+                                            (By.CSS_SELECTOR, "input[value='admin']")
         """
         super().__init__(driver, dropdown_locator)
         self.dropdown_list_locator = dropdown_list_locator
@@ -98,3 +109,17 @@ class DropdownDynamic(_Dropdown):
         self._start_typing(value.lower()[:char_num])
         self._wait_for_suggestions()
         self._select_option(value)
+
+    def get_text(self) -> str:
+        """
+        Gets selected text or placeholder text.
+
+        :return: text value from dropdown input field
+        """
+        result = self.web_element.get_attribute("value")
+        if result != "" and result is not None:
+            return result
+        placeholder = self.web_element.get_attribute("placeholder")
+        if placeholder != "" and placeholder is not None:
+            return placeholder
+        return ""

@@ -4,7 +4,7 @@ Represents checkable elements.
 
 from selenium.webdriver.support import expected_conditions
 
-from utilities.base_controls.base_control import _BaseControl
+from utilities.control_objects.base_control import _BaseControl
 
 
 class _SelectOptionControl(_BaseControl):
