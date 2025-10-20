@@ -3,8 +3,12 @@
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
-allure-results/
-99_notes/
+
 __pycache__/
 **/__pycache__/
 *.py[cod]
+
+99_notes/
+
+**/allure-results/
+**/reports/
