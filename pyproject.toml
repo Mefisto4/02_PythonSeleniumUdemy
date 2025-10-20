@@ -9,7 +9,6 @@ exclude = [
     ".venv",
     "__pycache__",
 ]
-
 line-length = 120
 indent-width = 4
 
