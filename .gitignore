@@ -10,5 +10,6 @@ __pycache__/
 
 99_notes/
 
-**/allure-results/
-**/reports/
+
+reports/
+htmlcov/
