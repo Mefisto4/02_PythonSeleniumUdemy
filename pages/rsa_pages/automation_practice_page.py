@@ -13,6 +13,7 @@ from utilities.control_objects.checkbox_radiobutton import Checkbox, Radiobutton
 from utilities.control_objects.dropdown import DropdownDynamic, DropdownStatic
 from utilities.control_objects.iframe import IFrame
 from utilities.control_objects.label import Label
+from utilities.control_objects.link import Link
 from utilities.control_objects.table import HeaderBodyTableStrategy, HeadingsTableStrategy, Table
 from utilities.control_objects.textbox import Textbox
 
@@ -247,6 +248,15 @@ class AutomationPracticePage(BasePage):
         """
         return IFrame(self.driver, self._locators.IFRAME, RahulShettyAcademyPage)
 
+    @property
+    def blinking_text_link(self) -> Link:
+        """
+        Returns blinking text link.
+
+        :return: Link
+        """
+        return Link(self.driver, self._locators.BLINKING_TEXT_LINK)
+
 
 class _AutomationPracticePageLocators:
     """
@@ -289,3 +299,5 @@ class _AutomationPracticePageLocators:
     MOUSE_HOVER_CONTENT_RELOAD = (By.XPATH, "//a[text()='Reload']")
 
     IFRAME = (By.ID, "courses-iframe")
+
+    BLINKING_TEXT_LINK = (By.CSS_SELECTOR, ".blinkingText")
