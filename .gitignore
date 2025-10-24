@@ -3,13 +3,13 @@
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
+.coverage
 
 __pycache__/
 **/__pycache__/
 *.py[cod]
 
 99_notes/
-
 
 reports/
 htmlcov/
