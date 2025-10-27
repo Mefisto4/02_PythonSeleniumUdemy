@@ -46,7 +46,7 @@ class BasePage:
         height = self.driver.execute_script("return document.body.scrollHeight")
         if isinstance(height, int):
             return height
-        raise TypeError(f"Received unexpected value type:\n VALUE: {height}\n TYPE: {type(height)}\n")
+        raise TypeError(f"Received unexpected value type:\n TYPE: {type(height)}\n EXPECTED: <class 'int'>\n")
 
     def get_width(self) -> int:
         """
@@ -57,7 +57,7 @@ class BasePage:
         width = self.driver.execute_script("return document.body.scrollWidth")
         if isinstance(width, int):
             return width
-        raise TypeError(f"Received unexpected value type:\n VALUE: {width}\n TYPE: {type(width)}\n")
+        raise TypeError(f"Received unexpected value type:\n TYPE: {type(width)}\n EXPECTED: <class 'int'>\n")
 
     def scroll(self, x: int = 0, y: int = 0) -> None:
         """
