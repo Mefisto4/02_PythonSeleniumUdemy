@@ -1,0 +1,93 @@
+{
+  "order_basic": [
+    {
+      "product_name": "Blackberry",
+      "product_price": 50000.0,
+      "product_quantity": 1.0,
+      "delivery_country": "Poland",
+      "type_len": 2,
+      "success_msg": "Success! Thank you! Your order will be delivered in next few weeks :-)."
+    },
+    {
+      "product_name": "iphone X",
+      "product_price": 100000.0,
+      "product_quantity": 1.0,
+      "delivery_country": "India",
+      "type_len": 3,
+      "success_msg": "Success! Thank you! Your order will be delivered in next few weeks :-)."
+    },
+    {
+      "product_name": "Samsung Note 8",
+      "product_price": 85000.0,
+      "product_quantity": 1.0,
+      "delivery_country": "Poland",
+      "type_len": -1,
+      "success_msg": "Success! Thank you! Your order will be delivered in next few weeks :-)."
+    },
+    {
+      "product_name": "Nokia Edge",
+      "product_price": 65000.0,
+      "product_quantity": 1.0,
+      "delivery_country": "India",
+      "type_len": -1,
+      "success_msg": "Success! Thank you! Your order will be delivered in next few weeks :-)."
+    }
+  ],
+  "order_with_changes": [
+    {
+      "products": {
+        "Blackberry": [
+          1.0,
+          50000.0
+        ],
+        "iphone X": [
+          1.0,
+          100000.0
+        ],
+        "Samsung Note 8": [
+          1.0,
+          85000.0
+        ],
+        "Nokia Edge": [
+          1.0,
+          65000.0
+        ]
+      },
+      "product_more": {
+        "Samsung Note 8": [
+          3.0,
+          85000.0
+        ]
+      },
+      "product_zero": {
+        "iphone X": [
+          0.0,
+          100000.0
+        ]
+      },
+      "product_fraction": {
+        "Blackberry": [
+          1.75,
+          50000.0
+        ]
+      },
+      "product_minus": {
+        "Nokia Edge": [
+          -2.0,
+          65000.0
+        ]
+      }
+    }
+  ],
+  "order_with_removals": [
+    {
+      "products": [
+        "Blackberry",
+        "iphone X",
+        "Samsung Note 8",
+        "Nokia Edge"
+      ],
+      "total_final": 0.0
+    }
+  ]
+}
